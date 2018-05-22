@@ -1,0 +1,84 @@
+回顾:
+1.适用情况:
+2.嵌套循环:
+3.数组:引用类型，相同数据类型元素的集合
+    int[] arr = new int[10];
+	int[] arr = {1,5,7};
+	int[] arr = new int[]{1,5,7};
+	System.out.println(arr.length);
+    下标(0开始，最大到.length-1)
+	arr[0] = 100;
+	arr[3] = 300; //数组下标越界
+	System.out.println(arr[arr.length-1]);
+	for(int i=0;i<arr.length;i++){
+	  arr[i] = 100;
+	  System.out.println(arr[i]);
+	}
+	System.arraycopy(a,1,a1,0,4);
+	int[] a1 = Arrays.copyOf(a,6);
+	a = Arrays.copyOf(a,a.length+1); //扩容
+	Arrays.sort(arr); //升序
+    冒泡:
+	  1)5个数冒4轮
+	  2)每一轮都是从第1个元素开始冒
+        每一次都是和它的下一个元素比
+	  3)冒出来的就不带它玩了
+
+
+
+
+
+正课:
+1.方法:
+  1)封装一段特定的业务逻辑功能
+  2)方法尽可能的独立，一个方法只干一件事
+  3)方法可以被反复调用多次
+  4)减少代码重复，有利于代码维护，有利于团队协作开发
+2.方法的定义:
+    修饰词 返回值类型 方法名(参数列表){
+	  方法体
+	}
+3.方法的调用:
+  3.1)无返回值: 方法名(有参传参);
+  3.2)有返回值: 数据类型 变量 = 方法名(有参传参);
+4.return:
+  1)return 值; 1.1)结束方法的执行  1.2)返回结果给调用方
+  2)return;    2.1)结束方法的执行
+
+
+
+
+
+猜字符小游戏:
+一.设计数据结构:变量
+   1)char[] chs;   //随机字符数组
+   2)char[] input; //用户输入的字符数组
+   3)int[] result; //对比的结果
+   4)int score;    //得分
+二.设计程序结构:方法
+   1)主方法:
+     public static void main(String[] args){
+	   //...
+	 }
+   2)生成随机字符数组
+     public static char[] generate(){
+	   char[] chs = new char[5];
+       //...
+	   return chs;
+	 }
+   3)对比:随机字符数组与用户输入的字符数组
+     public static int[] check(char[] chs,char[] input){
+	   int[] result = new int[2];
+	   //...
+	   return result;
+	 }
+三.设计算法:方法体
+        String str = "hello";
+   1)将字符串转换为大写字母和小写字母
+        str = str.toUpperCase(); //转成大写字母
+		str = str.toLowerCase(); //转成小写字母
+   2)将字符转换为字符数组
+        char[] input = str.toCharArray();
+   3)判断字符串内容是否相等
+        if(str.equals("EXIT")){
+		}

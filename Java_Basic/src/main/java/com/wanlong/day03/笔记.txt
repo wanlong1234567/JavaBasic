@@ -1,0 +1,45 @@
+回顾:
+1.变量:存数的
+    int a; int b,c;
+	int a=250; int a; a=250;
+	int b = a+10; //取出a的值250，加10后，再赋值给b
+    a = a+10; //在a本身基础之上增10
+	System.out.println(a);
+2.基本数据类型:
+  1)int:整型，4个字节，5,25,250...
+  2)long:长整型，8个字节，5L,250L,10000000000L...
+  3)double:浮点型，8个字节，3.14,25.0,0.589...
+  4)boolean:布尔型，1个字节，true,false
+  5)char:字符型，2个字节，'你','y','7',' ','\''...
+3.基本数据类型间的转换:
+  1)两种方式:
+    1.1)自动:小到大
+	1.2)强制:大到小
+  2)两点规则:
+      byte b1 = 5;
+	  byte b2 = 6;
+	  byte b3 = (byte)(b1+b2);
+4.Scanner的用法:
+    import java.util.Scanner;
+	Scanner scan = new Scanner(System.in);
+	System.out.println("请输入...");
+	int a = scan.nextInt();
+	int b = scan.nextDouble();
+
+
+笔记:
+1.运算符:
+  1)算术运算符:+-*/%,++,--
+  2)关系运算符:>,<,>=,<=,==,!= boolean
+  3)逻辑运算符:&&,||,! boolean
+  4)赋值运算符:=,+=,-=,*=,/=,%=
+  5)字符串连接运算符:+
+  6)三目运算符:boolean?数1:数2
+2.分支结构:有条件的执行某语句，并非每句必走
+  1)if:1条路
+  2)if...else:2条路
+  3)if...else if:多条路
+  4)switch...case:多条路
+    优点:效率高、结构清晰
+	缺点:整数、相等
+	break:跳出switch
